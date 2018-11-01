@@ -6,18 +6,67 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class HomeController {
 
+    /**
+     *系统框架页面
+     */
     @RequestMapping(value = "/home")
     public String home(){
         return "common/index";
     }
 
+    /**
+     * 欢迎页
+     * */
     @RequestMapping(value = "/welcome")
     public String welcome(){
         return "common/welcome";
     }
 
+    /**
+     * 系统登录页
+     * */
     @RequestMapping(value = "/login")
     public String login(){
         return "common/login";
+    }
+
+    /**
+     * 模块页面
+     * */
+    @RequestMapping(value = "/module")
+    public String module(){
+        return "module";
+    }
+
+    /**
+     * 角色页面
+     * */
+    @RequestMapping(value = "/role")
+    public String role(){
+        return "role";
+    }
+
+    /**
+     * 用户页面
+     * */
+    @RequestMapping(value = "/user")
+    public String user(){
+        return "user";
+    }
+
+    /**
+     * 学生页面
+     * */
+    @RequestMapping(value = "/student")
+    public String student(){
+        return "student";
+    }
+
+    /**
+     * 作品页面
+     * */
+    @RequestMapping(value = "/works")
+    public String works(){
+        return "works";
     }
 }
