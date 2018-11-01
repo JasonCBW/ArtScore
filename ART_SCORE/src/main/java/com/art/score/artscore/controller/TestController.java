@@ -20,7 +20,7 @@ public class TestController {
     @RequestMapping("/test")
     @Log(value = "测试模块",type = LogTypeEnum.PAY)
     public ResVo query(){
-        //log.info("test{}");
+        log.info("test{}");
         return  testService.getList();
     }
 
