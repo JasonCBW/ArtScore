@@ -1,0 +1,141 @@
+2018-10-29 16:44:22 579  [main] INFO  c.a.s.artscore.ArtscoreApplication - Starting ArtscoreApplication on admin-PC with PID 46644 (G:\artscore\ART_SCORE\target\classes started by admin in G:\artscore\ART_SCORE) 
+2018-10-29 16:44:22 583  [main] INFO  c.a.s.artscore.ArtscoreApplication - No active profile set, falling back to default profiles: default 
+2018-10-29 16:44:22 624  [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2eee3069: startup date [Mon Oct 29 16:44:22 CST 2018]; root of context hierarchy 
+2018-10-29 16:44:22 719  [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.3.6.Final 
+2018-10-29 16:44:23 1552 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8080 (http) 
+2018-10-29 16:44:23 1564 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2018-10-29 16:44:23 1573 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat] 
+2018-10-29 16:44:23 1573 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.34 
+2018-10-29 16:44:23 1661 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+2018-10-29 16:44:23 1661 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1037 ms 
+2018-10-29 16:44:23 1786 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/] 
+2018-10-29 16:44:23 1790 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*] 
+2018-10-29 16:44:23 1791 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*] 
+2018-10-29 16:44:23 1791 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*] 
+2018-10-29 16:44:23 1791 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*] 
+2018-10-29 16:44:24 2231 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2eee3069: startup date [Mon Oct 29 16:44:22 CST 2018]; root of context hierarchy 
+2018-10-29 16:44:24 2281 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/test/test]}" onto public com.art.score.artscore.vo.ResVo com.art.score.artscore.controller.TestController.query() 
+2018-10-29 16:44:24 2284 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest) 
+2018-10-29 16:44:24 2285 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) 
+2018-10-29 16:44:24 2309 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2018-10-29 16:44:24 2310 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2018-10-29 16:44:24 2342 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2018-10-29 16:44:24 2586 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup 
+2018-10-29 16:44:24 2587 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure 
+2018-10-29 16:44:24 2592 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource] 
+2018-10-29 16:44:24 2601 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"] 
+2018-10-29 16:44:24 2610 [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read 
+2018-10-29 16:44:24 2622 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8080 (http) 
+2018-10-29 16:44:24 2626 [main] INFO  c.a.s.artscore.ArtscoreApplication - Started ArtscoreApplication in 2.498 seconds (JVM running for 3.197) 
+2018-10-29 16:44:50 28257 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet' 
+2018-10-29 16:44:50 28257 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started 
+2018-10-29 16:44:50 28275 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 18 ms 
+2018-10-29 16:44:50 28292 [http-nio-8080-exec-1] INFO  c.a.s.a.controller.TestController - test 
+2018-10-29 16:44:50 28296 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Started. 
+2018-10-29 18:07:11 632  [main] INFO  c.a.s.artscore.ArtscoreApplication - Starting ArtscoreApplication on admin-PC with PID 49220 (G:\artscore\ART_SCORE\target\classes started by admin in G:\artscore\ART_SCORE) 
+2018-10-29 18:07:11 637  [main] INFO  c.a.s.artscore.ArtscoreApplication - No active profile set, falling back to default profiles: default 
+2018-10-29 18:07:11 682  [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5629510: startup date [Mon Oct 29 18:07:11 CST 2018]; root of context hierarchy 
+2018-10-29 18:07:11 749  [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.3.6.Final 
+2018-10-29 18:07:12 1741 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8080 (http) 
+2018-10-29 18:07:12 1755 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2018-10-29 18:07:12 1765 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat] 
+2018-10-29 18:07:12 1765 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.34 
+2018-10-29 18:07:12 1857 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+2018-10-29 18:07:12 1858 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1176 ms 
+2018-10-29 18:07:13 2002 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/] 
+2018-10-29 18:07:13 2006 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*] 
+2018-10-29 18:07:13 2006 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*] 
+2018-10-29 18:07:13 2007 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*] 
+2018-10-29 18:07:13 2007 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*] 
+2018-10-29 18:07:13 2469 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5629510: startup date [Mon Oct 29 18:07:11 CST 2018]; root of context hierarchy 
+2018-10-29 18:07:13 2519 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/test/test]}" onto public com.art.score.artscore.vo.ResVo com.art.score.artscore.controller.TestController.query() 
+2018-10-29 18:07:13 2522 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest) 
+2018-10-29 18:07:13 2522 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) 
+2018-10-29 18:07:13 2553 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2018-10-29 18:07:13 2553 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2018-10-29 18:07:13 2589 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2018-10-29 18:07:13 2856 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup 
+2018-10-29 18:07:13 2860 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure 
+2018-10-29 18:07:13 2864 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource] 
+2018-10-29 18:07:13 2874 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"] 
+2018-10-29 18:07:13 2884 [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read 
+2018-10-29 18:07:13 2896 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8080 (http) 
+2018-10-29 18:07:13 2900 [main] INFO  c.a.s.artscore.ArtscoreApplication - Started ArtscoreApplication in 2.756 seconds (JVM running for 3.492) 
+2018-10-29 18:07:52 41898 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet' 
+2018-10-29 18:07:52 41898 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started 
+2018-10-29 18:07:53 41916 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 18 ms 
+2018-10-29 18:07:53 41981 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Started. 
+2018-10-29 18:07:53 42378 [http-nio-8080-exec-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml] 
+2018-10-29 18:07:53 42459 [http-nio-8080-exec-1] INFO  c.a.s.a.controller.TestController - test 
+2018-10-29 18:09:17 535  [main] INFO  c.a.s.artscore.ArtscoreApplication - Starting ArtscoreApplication on admin-PC with PID 50628 (G:\artscore\ART_SCORE\target\classes started by admin in G:\artscore\ART_SCORE) 
+2018-10-29 18:09:17 537  [main] INFO  c.a.s.artscore.ArtscoreApplication - No active profile set, falling back to default profiles: default 
+2018-10-29 18:09:17 572  [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5629510: startup date [Mon Oct 29 18:09:17 CST 2018]; root of context hierarchy 
+2018-10-29 18:09:17 704  [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.3.6.Final 
+2018-10-29 18:09:18 1674 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8080 (http) 
+2018-10-29 18:09:18 1687 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2018-10-29 18:09:18 1696 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat] 
+2018-10-29 18:09:18 1696 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.34 
+2018-10-29 18:09:18 1786 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+2018-10-29 18:09:18 1786 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1214 ms 
+2018-10-29 18:09:18 1922 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/] 
+2018-10-29 18:09:18 1939 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*] 
+2018-10-29 18:09:18 1940 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*] 
+2018-10-29 18:09:18 1940 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*] 
+2018-10-29 18:09:18 1940 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*] 
+2018-10-29 18:09:19 2383 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5629510: startup date [Mon Oct 29 18:09:17 CST 2018]; root of context hierarchy 
+2018-10-29 18:09:19 2431 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/test/test]}" onto public com.art.score.artscore.vo.ResVo com.art.score.artscore.controller.TestController.query() 
+2018-10-29 18:09:19 2434 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest) 
+2018-10-29 18:09:19 2435 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) 
+2018-10-29 18:09:19 2462 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2018-10-29 18:09:19 2462 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2018-10-29 18:09:19 2498 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2018-10-29 18:09:19 2768 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup 
+2018-10-29 18:09:19 2770 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure 
+2018-10-29 18:09:19 2774 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource] 
+2018-10-29 18:09:19 2781 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"] 
+2018-10-29 18:09:19 2792 [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read 
+2018-10-29 18:09:19 2804 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8080 (http) 
+2018-10-29 18:09:19 2808 [main] INFO  c.a.s.artscore.ArtscoreApplication - Started ArtscoreApplication in 2.681 seconds (JVM running for 3.349) 
+2018-10-29 18:09:47 30444 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet' 
+2018-10-29 18:09:47 30444 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started 
+2018-10-29 18:09:47 30462 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 18 ms 
+2018-10-29 18:10:18 61386 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Started. 
+2018-10-29 18:10:18 62026 [http-nio-8080-exec-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml] 
+2018-10-29 18:10:20 64089 [http-nio-8080-exec-1] INFO  c.a.s.a.controller.TestController - test 
+2018-10-29 18:10:32 576  [main] INFO  c.a.s.artscore.ArtscoreApplication - Starting ArtscoreApplication on admin-PC with PID 37268 (G:\artscore\ART_SCORE\target\classes started by admin in G:\artscore\ART_SCORE) 
+2018-10-29 18:10:32 579  [main] INFO  c.a.s.artscore.ArtscoreApplication - No active profile set, falling back to default profiles: default 
+2018-10-29 18:10:32 651  [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5629510: startup date [Mon Oct 29 18:10:32 CST 2018]; root of context hierarchy 
+2018-10-29 18:10:32 769  [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.3.6.Final 
+2018-10-29 18:10:33 1765 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8080 (http) 
+2018-10-29 18:10:33 1778 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2018-10-29 18:10:33 1787 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat] 
+2018-10-29 18:10:33 1788 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.34 
+2018-10-29 18:10:33 1880 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+2018-10-29 18:10:33 1881 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1231 ms 
+2018-10-29 18:10:34 2026 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/] 
+2018-10-29 18:10:34 2030 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*] 
+2018-10-29 18:10:34 2030 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*] 
+2018-10-29 18:10:34 2030 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*] 
+2018-10-29 18:10:34 2030 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*] 
+2018-10-29 18:10:34 2483 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5629510: startup date [Mon Oct 29 18:10:32 CST 2018]; root of context hierarchy 
+2018-10-29 18:10:34 2532 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/test/test]}" onto public com.art.score.artscore.vo.ResVo com.art.score.artscore.controller.TestController.query() 
+2018-10-29 18:10:34 2535 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest) 
+2018-10-29 18:10:34 2535 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) 
+2018-10-29 18:10:34 2562 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2018-10-29 18:10:34 2563 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2018-10-29 18:10:34 2600 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2018-10-29 18:10:34 2874 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup 
+2018-10-29 18:10:34 2875 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure 
+2018-10-29 18:10:34 2879 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource] 
+2018-10-29 18:10:34 2887 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"] 
+2018-10-29 18:10:34 2897 [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read 
+2018-10-29 18:10:34 2908 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8080 (http) 
+2018-10-29 18:10:34 2912 [main] INFO  c.a.s.artscore.ArtscoreApplication - Started ArtscoreApplication in 2.777 seconds (JVM running for 3.469) 
+2018-10-29 18:11:21 49462 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet' 
+2018-10-29 18:11:21 49462 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started 
+2018-10-29 18:11:21 49481 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 19 ms 
+2018-10-29 18:11:22 50959 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Started. 
+2018-10-29 18:11:23 51348 [http-nio-8080-exec-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml] 
+2018-10-29 18:11:23 51397 [http-nio-8080-exec-1] INFO  c.a.s.a.controller.TestController - test 
+2018-10-29 18:12:02 90484 [http-nio-8080-exec-2] INFO  c.a.s.a.controller.TestController - test 
+2018-10-29 18:12:41 129514 [http-nio-8080-exec-4] INFO  c.a.s.a.controller.TestController - test 
