@@ -1350,3 +1350,188 @@ Error starting ApplicationContext. To display the auto-configuration report re-r
 2018-11-01 22:01:30 1146350 [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet' 
 2018-11-01 22:01:30 1146351 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started 
 2018-11-01 22:01:30 1146361 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 9 ms 
+2018-11-02 11:07:14 1805 [restartedMain] INFO  c.a.s.artscore.ArtscoreApplication - Starting ArtscoreApplication on HBCK0406-PC with PID 46788 (D:\workSpace\ArtScore\ART_SCORE\target\classes started by Administrator in D:\workSpace\ArtScore\ART_SCORE) 
+2018-11-02 11:07:14 1826 [restartedMain] INFO  c.a.s.artscore.ArtscoreApplication - No active profile set, falling back to default profiles: default 
+2018-11-02 11:07:14 2027 [restartedMain] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@42fd6928: startup date [Fri Nov 02 11:07:14 CST 2018]; root of context hierarchy 
+2018-11-02 11:07:14 2167 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.3.6.Final 
+2018-11-02 11:07:18 5381 [restartedMain] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8081 (http) 
+2018-11-02 11:07:18 5393 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"] 
+2018-11-02 11:07:18 5429 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat] 
+2018-11-02 11:07:18 5430 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.34 
+2018-11-02 11:07:18 5668 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+2018-11-02 11:07:18 5668 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3641 ms 
+2018-11-02 11:07:18 5914 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/] 
+2018-11-02 11:07:18 5917 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*] 
+2018-11-02 11:07:18 5917 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*] 
+2018-11-02 11:07:18 5917 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*] 
+2018-11-02 11:07:18 5917 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*] 
+2018-11-02 11:07:19 7126 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@42fd6928: startup date [Fri Nov 02 11:07:14 CST 2018]; root of context hierarchy 
+2018-11-02 11:07:19 7202 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/user]}" onto public java.lang.String com.art.score.artscore.controller.HomeController.user() 
+2018-11-02 11:07:19 7203 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/home]}" onto public java.lang.String com.art.score.artscore.controller.HomeController.home() 
+2018-11-02 11:07:19 7203 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/role]}" onto public java.lang.String com.art.score.artscore.controller.HomeController.role() 
+2018-11-02 11:07:19 7203 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/module]}" onto public java.lang.String com.art.score.artscore.controller.HomeController.module() 
+2018-11-02 11:07:19 7203 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/welcome]}" onto public java.lang.String com.art.score.artscore.controller.HomeController.welcome() 
+2018-11-02 11:07:19 7204 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/student]}" onto public java.lang.String com.art.score.artscore.controller.HomeController.student() 
+2018-11-02 11:07:19 7204 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/works]}" onto public java.lang.String com.art.score.artscore.controller.HomeController.works() 
+2018-11-02 11:07:19 7204 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/login]}" onto public java.lang.String com.art.score.artscore.controller.HomeController.login() 
+2018-11-02 11:07:19 7206 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/index]}" onto public java.lang.String com.art.score.artscore.controller.IndexController.index(java.util.Map<java.lang.String, java.lang.Object>) 
+2018-11-02 11:07:19 7207 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/test/test]}" onto public com.art.score.artscore.vo.ResVo com.art.score.artscore.controller.TestController.query() 
+2018-11-02 11:07:19 7209 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest) 
+2018-11-02 11:07:19 7209 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) 
+2018-11-02 11:07:20 7236 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2018-11-02 11:07:20 7236 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2018-11-02 11:07:20 7307 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2018-11-02 11:07:20 7567 [restartedMain] INFO  o.s.w.s.v.f.FreeMarkerConfigurer - ClassTemplateLoader for Spring macros added to FreeMarker configuration 
+2018-11-02 11:07:20 7736 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+2018-11-02 11:07:20 7778 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup 
+2018-11-02 11:07:20 7780 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure 
+2018-11-02 11:07:20 7784 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource] 
+2018-11-02 11:07:20 7824 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"] 
+2018-11-02 11:07:20 7842 [restartedMain] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read 
+2018-11-02 11:07:20 7868 [restartedMain] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8081 (http) 
+2018-11-02 11:07:20 7872 [restartedMain] INFO  c.a.s.artscore.ArtscoreApplication - Started ArtscoreApplication in 7.193 seconds (JVM running for 9.6) 
+2018-11-02 11:07:34 22023 [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet' 
+2018-11-02 11:07:34 22023 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started 
+2018-11-02 11:07:34 22053 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 29 ms 
+2018-11-02 11:07:35 22710 [http-nio-8081-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Started. 
+2018-11-02 11:07:36 23408 [http-nio-8081-exec-1] INFO  c.a.s.a.controller.TestController - test{} 
+2018-11-02 11:07:57 45215 [http-nio-8081-exec-3] INFO  c.a.s.a.controller.TestController - test{} 
+2018-11-02 11:08:13 60973 [http-nio-8081-exec-5] INFO  c.a.s.a.controller.TestController - test{} 
+2018-11-02 11:08:14 61720 [http-nio-8081-exec-7] INFO  c.a.s.a.controller.TestController - test{} 
+2018-11-02 11:08:15 63048 [http-nio-8081-exec-9] INFO  c.a.s.a.controller.TestController - test{} 
+2018-11-02 11:08:26 881  [restartedMain] INFO  c.a.s.artscore.ArtscoreApplication - Starting ArtscoreApplication on HBCK0406-PC with PID 45328 (D:\workSpace\ArtScore\ART_SCORE\target\classes started by Administrator in D:\workSpace\ArtScore\ART_SCORE) 
+2018-11-02 11:08:26 882  [restartedMain] INFO  c.a.s.artscore.ArtscoreApplication - No active profile set, falling back to default profiles: default 
+2018-11-02 11:08:26 927  [restartedMain] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@293b8797: startup date [Fri Nov 02 11:08:26 CST 2018]; root of context hierarchy 
+2018-11-02 11:08:26 1080 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.3.6.Final 
+2018-11-02 11:08:28 3255 [restartedMain] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8081 (http) 
+2018-11-02 11:08:28 3268 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"] 
+2018-11-02 11:08:28 3290 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat] 
+2018-11-02 11:08:28 3291 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.34 
+2018-11-02 11:08:28 3467 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+2018-11-02 11:08:28 3467 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2540 ms 
+2018-11-02 11:08:28 3724 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/] 
+2018-11-02 11:08:28 3730 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*] 
+2018-11-02 11:08:28 3730 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*] 
+2018-11-02 11:08:28 3731 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*] 
+2018-11-02 11:08:28 3732 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*] 
+2018-11-02 11:08:29 4454 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@293b8797: startup date [Fri Nov 02 11:08:26 CST 2018]; root of context hierarchy 
+2018-11-02 11:08:29 4520 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/user]}" onto public java.lang.String com.art.score.artscore.controller.HomeController.user() 
+2018-11-02 11:08:29 4521 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/module]}" onto public java.lang.String com.art.score.artscore.controller.HomeController.module() 
+2018-11-02 11:08:29 4521 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/works]}" onto public java.lang.String com.art.score.artscore.controller.HomeController.works() 
+2018-11-02 11:08:29 4521 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/home]}" onto public java.lang.String com.art.score.artscore.controller.HomeController.home() 
+2018-11-02 11:08:29 4521 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/role]}" onto public java.lang.String com.art.score.artscore.controller.HomeController.role() 
+2018-11-02 11:08:29 4522 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/student]}" onto public java.lang.String com.art.score.artscore.controller.HomeController.student() 
+2018-11-02 11:08:29 4522 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/login]}" onto public java.lang.String com.art.score.artscore.controller.HomeController.login() 
+2018-11-02 11:08:29 4522 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/welcome]}" onto public java.lang.String com.art.score.artscore.controller.HomeController.welcome() 
+2018-11-02 11:08:29 4524 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/index]}" onto public java.lang.String com.art.score.artscore.controller.IndexController.index(java.util.Map<java.lang.String, java.lang.Object>) 
+2018-11-02 11:08:29 4525 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/test/test]}" onto public com.art.score.artscore.vo.ResVo com.art.score.artscore.controller.TestController.query() 
+2018-11-02 11:08:29 4528 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest) 
+2018-11-02 11:08:29 4529 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) 
+2018-11-02 11:08:29 4569 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2018-11-02 11:08:29 4569 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2018-11-02 11:08:29 4617 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2018-11-02 11:08:30 4860 [restartedMain] INFO  o.s.w.s.v.f.FreeMarkerConfigurer - ClassTemplateLoader for Spring macros added to FreeMarker configuration 
+2018-11-02 11:08:30 5118 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+2018-11-02 11:08:30 5241 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup 
+2018-11-02 11:08:30 5242 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure 
+2018-11-02 11:08:30 5247 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource] 
+2018-11-02 11:08:30 5258 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"] 
+2018-11-02 11:08:30 5295 [restartedMain] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read 
+2018-11-02 11:08:30 5330 [restartedMain] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8081 (http) 
+2018-11-02 11:08:30 5336 [restartedMain] INFO  c.a.s.artscore.ArtscoreApplication - Started ArtscoreApplication in 4.89 seconds (JVM running for 6.742) 
+2018-11-02 11:08:35 10674 [http-nio-8081-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet' 
+2018-11-02 11:08:35 10674 [http-nio-8081-exec-2] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started 
+2018-11-02 11:08:35 10713 [http-nio-8081-exec-2] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 39 ms 
+2018-11-02 11:08:36 10904 [http-nio-8081-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Started. 
+2018-11-02 11:08:36 11537 [http-nio-8081-exec-2] INFO  c.a.s.a.controller.TestController - test{} 
+2018-11-02 11:10:32 127067 [http-nio-8081-exec-4] INFO  c.a.s.a.controller.TestController - test{} 
+2018-11-02 11:11:54 209488 [http-nio-8081-exec-6] INFO  c.a.s.a.controller.TestController - test{} 
+2018-11-02 11:12:05 220506 [Thread-14] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@293b8797: startup date [Fri Nov 02 11:08:26 CST 2018]; root of context hierarchy 
+2018-11-02 11:12:05 220509 [Thread-14] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown 
+2018-11-02 11:12:05 220509 [Thread-14] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans 
+2018-11-02 11:12:05 220510 [Thread-14] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Close initiated... 
+2018-11-02 11:12:05 220517 [Thread-14] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Closed. 
+2018-11-02 11:12:06 221034 [restartedMain] INFO  c.a.s.artscore.ArtscoreApplication - Starting ArtscoreApplication on HBCK0406-PC with PID 45328 (D:\workSpace\ArtScore\ART_SCORE\target\classes started by Administrator in D:\workSpace\ArtScore\ART_SCORE) 
+2018-11-02 11:12:06 221035 [restartedMain] INFO  c.a.s.artscore.ArtscoreApplication - No active profile set, falling back to default profiles: default 
+2018-11-02 11:12:06 221037 [restartedMain] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a782b05: startup date [Fri Nov 02 11:12:06 CST 2018]; root of context hierarchy 
+2018-11-02 11:12:06 221653 [restartedMain] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8081 (http) 
+2018-11-02 11:12:06 221654 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"] 
+2018-11-02 11:12:06 221654 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat] 
+2018-11-02 11:12:06 221654 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.34 
+2018-11-02 11:12:06 221700 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+2018-11-02 11:12:06 221701 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 664 ms 
+2018-11-02 11:12:07 221750 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/] 
+2018-11-02 11:12:07 221751 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*] 
+2018-11-02 11:12:07 221751 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*] 
+2018-11-02 11:12:07 221751 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*] 
+2018-11-02 11:12:07 221751 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*] 
+2018-11-02 11:12:07 221984 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a782b05: startup date [Fri Nov 02 11:12:06 CST 2018]; root of context hierarchy 
+2018-11-02 11:12:07 221997 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/user]}" onto public java.lang.String com.art.score.artscore.controller.HomeController.user() 
+2018-11-02 11:12:07 221998 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/module]}" onto public java.lang.String com.art.score.artscore.controller.HomeController.module() 
+2018-11-02 11:12:07 221998 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/works]}" onto public java.lang.String com.art.score.artscore.controller.HomeController.works() 
+2018-11-02 11:12:07 221998 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/home]}" onto public java.lang.String com.art.score.artscore.controller.HomeController.home() 
+2018-11-02 11:12:07 221998 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/role]}" onto public java.lang.String com.art.score.artscore.controller.HomeController.role() 
+2018-11-02 11:12:07 221998 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/student]}" onto public java.lang.String com.art.score.artscore.controller.HomeController.student() 
+2018-11-02 11:12:07 221998 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/login]}" onto public java.lang.String com.art.score.artscore.controller.HomeController.login() 
+2018-11-02 11:12:07 221998 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/welcome]}" onto public java.lang.String com.art.score.artscore.controller.HomeController.welcome() 
+2018-11-02 11:12:07 221999 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/index]}" onto public java.lang.String com.art.score.artscore.controller.IndexController.index(java.util.Map<java.lang.String, java.lang.Object>) 
+2018-11-02 11:12:07 221999 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/test/test]}" onto public com.art.score.artscore.vo.ResVo com.art.score.artscore.controller.TestController.query() 
+2018-11-02 11:12:07 222001 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest) 
+2018-11-02 11:12:07 222001 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) 
+2018-11-02 11:12:07 222017 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2018-11-02 11:12:07 222017 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2018-11-02 11:12:07 222034 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2018-11-02 11:12:07 222081 [restartedMain] INFO  o.s.w.s.v.f.FreeMarkerConfigurer - ClassTemplateLoader for Spring macros added to FreeMarker configuration 
+2018-11-02 11:12:07 222148 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+2018-11-02 11:12:07 222271 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup 
+2018-11-02 11:12:07 222272 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure 
+2018-11-02 11:12:07 222274 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource] 
+2018-11-02 11:12:07 222278 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"] 
+2018-11-02 11:12:07 222285 [restartedMain] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read 
+2018-11-02 11:12:07 222304 [restartedMain] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8081 (http) 
+2018-11-02 11:12:07 222306 [restartedMain] INFO  c.a.s.artscore.ArtscoreApplication - Started ArtscoreApplication in 1.349 seconds (JVM running for 223.712) 
+2018-11-02 11:15:24 999  [restartedMain] INFO  c.a.s.artscore.ArtscoreApplication - Starting ArtscoreApplication on HBCK0406-PC with PID 48016 (D:\workSpace\ArtScore\ART_SCORE\target\classes started by Administrator in D:\workSpace\ArtScore\ART_SCORE) 
+2018-11-02 11:15:24 1000 [restartedMain] INFO  c.a.s.artscore.ArtscoreApplication - No active profile set, falling back to default profiles: default 
+2018-11-02 11:15:24 1049 [restartedMain] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2fa83c4a: startup date [Fri Nov 02 11:15:24 CST 2018]; root of context hierarchy 
+2018-11-02 11:15:24 1171 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.3.6.Final 
+2018-11-02 11:15:26 3244 [restartedMain] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8081 (http) 
+2018-11-02 11:15:26 3259 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"] 
+2018-11-02 11:15:26 3286 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat] 
+2018-11-02 11:15:26 3291 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.34 
+2018-11-02 11:15:26 3461 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+2018-11-02 11:15:26 3461 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2412 ms 
+2018-11-02 11:15:26 3763 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/] 
+2018-11-02 11:15:26 3769 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*] 
+2018-11-02 11:15:26 3772 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*] 
+2018-11-02 11:15:26 3774 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*] 
+2018-11-02 11:15:26 3774 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*] 
+2018-11-02 11:15:27 4525 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2fa83c4a: startup date [Fri Nov 02 11:15:24 CST 2018]; root of context hierarchy 
+2018-11-02 11:15:27 4594 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/user]}" onto public java.lang.String com.art.score.artscore.controller.HomeController.user() 
+2018-11-02 11:15:27 4595 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/module]}" onto public java.lang.String com.art.score.artscore.controller.HomeController.module() 
+2018-11-02 11:15:27 4596 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/home]}" onto public java.lang.String com.art.score.artscore.controller.HomeController.home() 
+2018-11-02 11:15:27 4596 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/role]}" onto public java.lang.String com.art.score.artscore.controller.HomeController.role() 
+2018-11-02 11:15:27 4596 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/welcome]}" onto public java.lang.String com.art.score.artscore.controller.HomeController.welcome() 
+2018-11-02 11:15:27 4596 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/student]}" onto public java.lang.String com.art.score.artscore.controller.HomeController.student() 
+2018-11-02 11:15:27 4596 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/login]}" onto public java.lang.String com.art.score.artscore.controller.HomeController.login() 
+2018-11-02 11:15:27 4596 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/works]}" onto public java.lang.String com.art.score.artscore.controller.HomeController.works() 
+2018-11-02 11:15:27 4599 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/index]}" onto public java.lang.String com.art.score.artscore.controller.IndexController.index(java.util.Map<java.lang.String, java.lang.Object>) 
+2018-11-02 11:15:27 4600 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/test/test]}" onto public com.art.score.artscore.vo.ResVo com.art.score.artscore.controller.TestController.query() 
+2018-11-02 11:15:27 4603 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest) 
+2018-11-02 11:15:27 4603 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) 
+2018-11-02 11:15:27 4644 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2018-11-02 11:15:27 4644 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2018-11-02 11:15:27 4693 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2018-11-02 11:15:28 4920 [restartedMain] INFO  o.s.w.s.v.f.FreeMarkerConfigurer - ClassTemplateLoader for Spring macros added to FreeMarker configuration 
+2018-11-02 11:15:28 5185 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+2018-11-02 11:15:28 5324 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup 
+2018-11-02 11:15:28 5326 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure 
+2018-11-02 11:15:28 5332 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource] 
+2018-11-02 11:15:28 5343 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"] 
+2018-11-02 11:15:28 5378 [restartedMain] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read 
+2018-11-02 11:15:28 5418 [restartedMain] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8081 (http) 
+2018-11-02 11:15:28 5423 [restartedMain] INFO  c.a.s.artscore.ArtscoreApplication - Started ArtscoreApplication in 4.897 seconds (JVM running for 6.791) 
+2018-11-02 11:15:32 9684 [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet' 
+2018-11-02 11:15:32 9684 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started 
+2018-11-02 11:15:32 9721 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 37 ms 
+2018-11-02 11:15:33 9908 [http-nio-8081-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Started. 
+2018-11-02 11:15:33 10369 [http-nio-8081-exec-1] INFO  c.a.s.a.controller.TestController - test{} 

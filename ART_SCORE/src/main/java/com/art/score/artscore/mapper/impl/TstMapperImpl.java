@@ -3,7 +3,6 @@ package com.art.score.artscore.mapper.impl;
 import com.alibaba.fastjson.JSONObject;
 import com.art.score.artscore.mapper.TestMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Service;
