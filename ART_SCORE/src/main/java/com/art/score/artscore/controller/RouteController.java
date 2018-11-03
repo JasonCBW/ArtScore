@@ -63,10 +63,18 @@ public class RouteController {
     }
 
     /**
-     * 作品页面
+     * 在线审核页面
      * */
     @RequestMapping(value = "/works")
     public String works(){
         return "works";
+    }
+
+    /**
+     * 微信关注用户页面
+     * */
+    @RequestMapping(value = "/member")
+    public String member(){
+        return "member";
     }
 }

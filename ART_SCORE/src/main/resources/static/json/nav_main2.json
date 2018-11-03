@@ -30,15 +30,15 @@
         },
         {
           "id": 5,
-          "text": "作品管理",
+          "text": "在线审核",
           "icon": "&#xe621;",
           "href": "works.html"
         },
         {
           "id": 6,
-          "text": "登录页",
+          "text": "关注用户",
           "icon": "&#xe621;",
-          "href": "login.html"
+          "href": "member.html"
         }
       ]
     }
