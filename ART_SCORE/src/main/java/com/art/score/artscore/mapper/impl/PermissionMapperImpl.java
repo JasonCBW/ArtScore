@@ -24,13 +24,13 @@ public class PermissionMapperImpl implements PermissionMapper {
     public List<JSONObject> queryPower(Integer userid) {
         //这个JDBC 查询的时候需要一个rowMapper  这个莫比东西,你就这样写 ,
         // 这个rowMpper 作用就是把 user_name 转换成你需要的
-        String sql = "select * from sys_user where id=?";
+        String sql = "select roleid from sys_user where id=?";
         List<JSONObject> list = jdbcTemplate.query(sql, new Object[]{userid}, new RowMapper<JSONObject>() {
             @Override
             public JSONObject mapRow(ResultSet resultSet, int i) throws SQLException {
                 JSONObject jsonObject = new JSONObject();
                 //jsonObject.put("data",resultSet);
-                jsonObject.put("1", resultSet.getString("username"));
+                jsonObject.put("1", resultSet.getString("roleid"));
                 return jsonObject;
             }
         });
