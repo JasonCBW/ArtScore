@@ -32,3 +32,5 @@ server:
 logging:
   config: classpath:conf/logback.xml
 
+mybatis:
+  mapper-locations: classpath:conf/mapper/*.xml
