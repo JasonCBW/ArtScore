@@ -1,11 +1,11 @@
-package com.art.score.artscore.model;
+package com.art.score.artscore.vo;
 
 import lombok.Data;
 
 import java.util.Date;
 
 @Data
-public class sys_user {
+public class Sys_user {
 
     private Integer id;
 
