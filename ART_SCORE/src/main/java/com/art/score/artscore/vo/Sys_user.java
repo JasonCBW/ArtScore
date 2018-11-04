@@ -9,27 +9,17 @@ public class Sys_user {
 
     private Integer id;
 
-    private String username;
+    private String name;
 
     private String logincode;
 
-    private String email;
-
-    private String phone;
-
     private String pwd;
-
-    private String roleid;
-
-    private String specialpower;
 
     private Integer status;
 
-    private Date createdate;
+    private String roleid;
 
-    private Date lastupdate;
+    private Date createtime;
 
-    private Date lastlogin;
-
-    private String remark;
+    private Date lastlogintime;
 }

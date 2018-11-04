@@ -61,7 +61,7 @@ public class LogAop {
             //判断日志类型插入不同的log表,根绝业务需要配置枚举,如果不需要可以把switch干掉
             switch (log.type().toString()) {
                 case "PAY":
-                    logMapper.saveLog(logVo);
+                    //logMapper.saveLog(logVo);
                     break;
             }
 

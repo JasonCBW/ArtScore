@@ -24,7 +24,7 @@ public class LoginInterceptor implements HandlerInterceptor {
     private String sessionName;
 
     //公开访问的的URL
-    List<String> authList = new ArrayList<String>(Arrays.asList("/login"));
+    List<String> authList = new ArrayList<String>(Arrays.asList("/login","/loginValidata"));
 
     @Override
     public boolean preHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o) throws Exception {

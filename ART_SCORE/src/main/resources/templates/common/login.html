@@ -38,17 +38,17 @@
             var formdata = data.field;
             $.post("/login/loginValidata", formdata, function (ret) {
                 console.log(ret);
-                // if (ret.flag) {
-                //     layer.msg("登录成功!");
-                //     setTimeout(function () {
-                //         //保存用户信息到cookie
-                //         $.cookie('userinfo', JSON.stringify(ret.data[0]), { path: "/" });
-                //         window.location.href = "/";
-                //     }, 2000);
-                // }
-                // else {
-                //     layer.msg(ret.msg);
-                // }
+                if (ret.code==200 && data!=null) {
+                    layer.msg("登录成功!");
+                    setTimeout(function () {
+                        //保存用户信息到cookie
+                        $.cookie('userinfo', JSON.stringify(ret.data), { path: "/" });
+                        window.location.href = "/sys";
+                    }, 2000);
+                }
+                else {
+                    layer.msg("登录失败!");
+                }
             }, "json");
             return false;
         });

@@ -8,6 +8,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
+
 @RestController
 @RequestMapping("login")
 @Slf4j
@@ -19,9 +21,9 @@ public class LoginController {
     @RequestMapping(value = "loginValidata", method = RequestMethod.POST)
     @Log(value = "用户登录", type = LogTypeEnum.LOG)
     @ResponseBody
-    public ResVo loginValidata(@RequestParam String account, @RequestParam String pwd) {
-        log.info("test{}");
+    public ResVo loginValidata(HttpServletRequest request, @RequestParam String account, @RequestParam String pwd) {
+        //log.info("test{}");
 
-        return loginService.loginValidata(account, pwd);
+        return loginService.loginValidata(request,account, pwd);
     }
 }
