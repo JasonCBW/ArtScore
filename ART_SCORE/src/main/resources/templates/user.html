@@ -42,10 +42,7 @@
         <div class="layui-input-block">
             <select id="moduletype" lay-filter="moduletype" name="parentid">
                 <option value="0">一级分类(默认)</option>
-                @foreach (DataRow item in Model["module"].Rows)
-                {
-                <option value="@item["id"]">@item["modulename"]</option>
-                }
+
             </select>
         </div>
     </div>
@@ -106,7 +103,7 @@
             id: 'dataCheck',
             height: 450,
             even: true,
-            url: '/api/module/getlist',
+            url: '/user/getlist',
             limits: [10, 15, 20],
             limit: 10,
             page: true,
@@ -114,8 +111,7 @@
             cols: [[
                 { type: 'checkbox', checkbox: true, fixed: true, float: 'left' },
                 { type: 'numbers', title: '序号' },
-                { field: 'modulename', title: '用户名称' },
-                { field: 'url', title: '所属角色' },
+                { field: 'username', title: '用户名称' },
                 { field: 'status', title: '状态', templet: '#statusTpl' },
                 { fixed: 'right', title: '操作', align: 'center', toolbar: '#barOption' }
             ]]
@@ -179,8 +175,8 @@
             view: function (obj) {
                 var data = obj.data;
                 $("#save").addClass("layui-btn-disabled").attr("disabled", "disabled");
-                $.getJSON("/api/module/getByID", { id: data.id }, function (d) {
-                    if (d) {
+                $.getJSON("/user/getById", { id: data.id }, function (d) {
+                    if (d.code==200) {
                         $("#mainForm").show();
                         index = layer.open({
                             type: 1,
