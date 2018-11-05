@@ -17,8 +17,7 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
-@Aspect
-@Component
+
 public class LogAop {
 
     @Autowired
@@ -46,7 +45,7 @@ public class LogAop {
             logVo.setUser("test");
             logVo.setUserId("1");
             logVo.setToken("testsdkTOken");
-            logVo.setParams(params.toString());
+                logVo.setParams(params.toString());
             logVo.setClassName(className);
             logVo.setMethod(methodName);
             logVo.setCreateTime(new Date());

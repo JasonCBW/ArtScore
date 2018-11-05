@@ -1,7 +1,7 @@
 spring:
   datasource:
     username: root
-    password: 549986
+    password: 123456
     url: jdbc:mysql://127.0.0.1:3306/webadmin?autoReconnect=true&useUnicode=true&characterEncoding=utf-8
     driverClassName: com.mysql.jdbc.Driver
     dbcp2:
