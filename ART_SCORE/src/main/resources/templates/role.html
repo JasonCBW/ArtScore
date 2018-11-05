@@ -102,7 +102,7 @@
             id: 'dataCheck',
             height: 450,
             even: true,
-            url: '/role/data',
+            url: '/role/getlist',
             limits: [10, 15, 20],
             limit: 10,
             page: true,
@@ -110,9 +110,7 @@
             cols: [[
                 { type: 'checkbox', checkbox: true, fixed: true, float: 'left' },
                 { type: 'numbers', title: '序号' },
-                { field: 'modulename', title: '角色名称' },
-                { field: 'url', title: '页面地址' },
-                { field: 'parentname', title: '所属类别' },
+                { field: 'rolename', title: '角色名称' },
                 { field: 'status', title: '状态', templet: '#statusTpl' },
                 { fixed: 'right', title: '操作', align: 'center', toolbar: '#barOption' }
             ]]
@@ -125,8 +123,8 @@
 
         form.on('submit(moduleform)', function (data) {
             var formdata = data.field;
-            $.post("/api/module/addOrupdate", formdata, function (ret) {
-                if (ret.flag) {
+            $.post("/role/getById", formdata, function (ret) {
+                if (ret.code==200) {
                     layer.msg("保存成功!");
                     setTimeout(function () {
                         layer.close(index);
@@ -176,7 +174,9 @@
             view: function (obj) {
                 var data = obj.data;
                 $("#save").addClass("layui-btn-disabled").attr("disabled", "disabled");
-                $.getJSON("/api/module/getByID", { id: data.id }, function (d) {
+                $.getJSON("/role/getById", { id: data.id }, function (d) {
+                    debugger;
+                    console.log(d);
                     if (d) {
                         $("#mainForm").show();
                         index = layer.open({
