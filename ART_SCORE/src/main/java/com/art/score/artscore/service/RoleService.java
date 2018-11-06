@@ -1,12 +1,11 @@
 package com.art.score.artscore.service;
 
 import com.alibaba.fastjson.JSONObject;
+import com.art.score.artscore.vo.PageVo;
 import com.art.score.artscore.vo.ResVo;
 
-import java.util.List;
-
 public interface RoleService {
-    JSONObject getRolelist(JSONObject josn);
+    PageVo getRolelist(JSONObject josn);
 
     ResVo getRoleByID(Integer id);
 }

@@ -1,7 +1,6 @@
 package com.art.score.artscore.mapper;
 
 import com.alibaba.fastjson.JSONObject;
-import com.art.score.artscore.vo.ResVo;
 
 import java.util.List;
 

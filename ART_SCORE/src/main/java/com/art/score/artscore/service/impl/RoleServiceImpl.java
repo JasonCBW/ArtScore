@@ -3,10 +3,10 @@ package com.art.score.artscore.service.impl;
 import com.alibaba.fastjson.JSONObject;
 import com.art.score.artscore.mapper.RoleMapper;
 import com.art.score.artscore.service.RoleService;
+import com.art.score.artscore.vo.PageVo;
 import com.art.score.artscore.vo.ResVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
@@ -17,14 +17,9 @@ public class RoleServiceImpl implements RoleService {
     RoleMapper roleMapper;
 
     @Override
-    public JSONObject getRolelist(JSONObject json) {
-        JSONObject obj=new JSONObject();
+    public PageVo getRolelist(JSONObject json) {
         List<JSONObject> data=roleMapper.queryList(json);
-        obj.put("code",0);
-        obj.put("msg","");
-        obj.put("count",data.size());
-        obj.put("data",data);
-        return obj;
+        return new PageVo(0, "", 1000, data);
     }
 
     @Override
