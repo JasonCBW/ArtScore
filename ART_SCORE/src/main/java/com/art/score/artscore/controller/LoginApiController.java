@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 @RestController
 @RequestMapping("login")
 @Slf4j
-public class LoginController {
+public class LoginApiController {
 
     @Autowired
     LoginService loginService;

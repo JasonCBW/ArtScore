@@ -1,6 +1,5 @@
 package com.art.score.artscore.controller;
 
-import com.alibaba.fastjson.JSONObject;
 import com.art.score.artscore.service.ModuleService;
 import com.art.score.artscore.vo.PageVo;
 import com.art.score.artscore.vo.ResVo;
@@ -10,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("module")
-public class ModuleController {
+public class ModuleApiController {
 
     @Autowired
     ModuleService service;
@@ -20,8 +19,7 @@ public class ModuleController {
      */
     @RequestMapping("getlist")
     public PageVo queryList() {
-        PageVo vo = service.getModulelist();
-        return vo;
+        return service.getModulelist();
     }
 
     /**
@@ -29,7 +27,7 @@ public class ModuleController {
      */
     @RequestMapping("save")
     public ResVo save(@RequestBody Sys_module module) {
-        return  service.save(module);
+        return service.save(module);
     }
 
     /**
@@ -44,8 +42,8 @@ public class ModuleController {
      * 删除模块
      */
     @RequestMapping("delById")
-    public ResVo del(String ids) {
-        return service.dels(ids);
+    public ResVo del(@RequestParam(value = "id", required = false) String id) {
+        return service.dels(id);
     }
 
     /**
@@ -53,7 +51,6 @@ public class ModuleController {
      */
     @RequestMapping("getById")
     public ResVo getByID(@RequestParam Integer id) {
-        ResVo vo = service.getModuleByID(id);
-        return vo;
+        return service.getModuleByID(id);
     }
 }

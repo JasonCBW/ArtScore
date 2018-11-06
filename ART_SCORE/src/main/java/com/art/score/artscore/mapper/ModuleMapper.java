@@ -15,5 +15,7 @@ public interface ModuleMapper {
 
     boolean update(Sys_module module);
 
-    boolean deleteByIds(@Param("ids") String ids);
+    boolean deleteByIds(@Param("id") String id);
+
+    List<JSONObject> queryModuleTypes();
 }
