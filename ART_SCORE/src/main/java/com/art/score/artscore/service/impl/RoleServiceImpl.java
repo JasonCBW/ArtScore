@@ -5,6 +5,8 @@ import com.art.score.artscore.mapper.RoleMapper;
 import com.art.score.artscore.service.RoleService;
 import com.art.score.artscore.vo.PageVo;
 import com.art.score.artscore.vo.ResVo;
+import com.art.score.artscore.vo.Sys_Role;
+import com.art.score.artscore.vo.Sys_module;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -30,9 +32,21 @@ public class RoleServiceImpl implements RoleService {
     }
 
     @Override
+    public ResVo save(Sys_Role role) {
+        boolean flag = roleMapper.save(role);
+        return new ResVo(flag ? "suc" : "error", flag ? "操作成功" : "操作失败");
+    }
+
+    @Override
+    public ResVo update(Sys_Role role) {
+        boolean flag = roleMapper.save(role);
+        return new ResVo(flag ? "suc" : "error", flag ? "操作成功" : "操作失败");
+    }
+
+
+    @Override
     public ResVo deleteRoleByIds(String ids) {
-        if (roleMapper.deleteRoleByIds(ids))
-        return new ResVo("suc", "删除成功");
-        return new ResVo("curd", "删除失败");
+        boolean flag = roleMapper.deleteRoleByIds(ids);
+        return new ResVo(flag ? "suc" : "error", flag ? "操作成功" : "操作失败");
     }
 }
