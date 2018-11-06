@@ -11,4 +11,6 @@ public interface RoleMapper {
      List<JSONObject> queryList(JSONObject jsonObject);
 
      JSONObject queryByID(Integer id);
+
+    boolean deleteRoleByIds(@Param("ids")String ids);
 }
