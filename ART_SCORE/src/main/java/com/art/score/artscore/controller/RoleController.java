@@ -38,7 +38,15 @@ public class RoleController {
     public ResVo getByID(@RequestParam Integer id)
     {
         ResVo vo =service.getRoleByID(id);
-
         return vo;
     }
+
+    /**
+     * 角色列表数据
+     * */
+    @RequestMapping("delRole")
+    public ResVo delRole(String ids){
+        return   service.deleteRoleByIds(ids);
+    }
+
 }

@@ -11,4 +11,8 @@
     <select id="queryByID" resultType="com.alibaba.fastjson.JSONObject" parameterType="com.alibaba.fastjson.JSONObject">
             select * from sys_role where id =#{id}
     </select>
+
+    <delete id="deleteRoleByIds" parameterType="string">
+            delete  from  sys_role  where  id in (${ids})
+    </delete>
 </mapper>

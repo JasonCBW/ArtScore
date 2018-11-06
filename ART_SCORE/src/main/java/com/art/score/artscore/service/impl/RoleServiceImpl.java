@@ -33,4 +33,11 @@ public class RoleServiceImpl implements RoleService {
         JSONObject obj=roleMapper.queryByID(id);
         return new ResVo("suc", "操作成功",obj);
     }
+
+    @Override
+    public ResVo deleteRoleByIds(String ids) {
+        if (roleMapper.deleteRoleByIds(ids))
+        return new ResVo("suc", "删除成功");
+        return new ResVo("curd", "删除失败");
+    }
 }

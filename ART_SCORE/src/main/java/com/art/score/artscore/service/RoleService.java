@@ -9,4 +9,6 @@ public interface RoleService {
     JSONObject getRolelist(JSONObject josn);
 
     ResVo getRoleByID(Integer id);
+
+    ResVo deleteRoleByIds(String ids);
 }
