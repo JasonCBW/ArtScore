@@ -102,7 +102,7 @@
             id: 'dataCheck',
             height: 450,
             even: true,
-            url: '/api/module/getlist',
+            url: '/module/getlist',
             limits: [10, 15, 20],
             limit: 10,
             page: true,
@@ -112,7 +112,7 @@
                 { type: 'numbers', title: '序号' },
                 { field: 'modulename', title: '模块名称' },
                 { field: 'url', title: '页面地址' },
-                { field: 'parentname', title: '所属类别' },
+                // { field: 'parentname', title: '所属类别' },
                 { field: 'status', title: '状态', templet: '#statusTpl' },
                 { fixed: 'right', title: '操作', align: 'center', toolbar: '#barOption' }
             ]]

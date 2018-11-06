@@ -1,33 +1,28 @@
 package com.art.score.artscore.controller;
 
 import com.alibaba.fastjson.JSONObject;
-import com.art.score.artscore.service.RoleService;
+import com.art.score.artscore.service.ModuleService;
 import com.art.score.artscore.vo.PageVo;
 import com.art.score.artscore.vo.ResVo;
-import org.omg.CORBA.PUBLIC_MEMBER;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
-
 @RestController
-@RequestMapping("role")
-public class RoleController {
+@RequestMapping("module")
+public class ModuleController {
 
     @Autowired
-    RoleService service;
+    ModuleService service;
 
     /**
-     * 角色列表数据
+     * 模块列表数据
      * */
     @RequestMapping("getlist")
-    public PageVo queryList(String userid){
-        JSONObject params = new JSONObject();
-        params.put("userid",userid);
-        PageVo vo = service.getRolelist(params);
+    public PageVo queryList(){
+        PageVo vo = service.getModulelist();
         return  vo;
     }
 
@@ -38,16 +33,7 @@ public class RoleController {
     @RequestMapping("getById")
     public ResVo getByID(@RequestParam Integer id)
     {
-        ResVo vo =service.getRoleByID(id);
+        ResVo vo =service.getModuleByID(id);
         return vo;
     }
-
-    /**
-     * 角色列表数据
-     * */
-    @RequestMapping("delRole")
-    public ResVo delRole(String ids){
-        return   service.deleteRoleByIds(ids);
-    }
-
 }
