@@ -7,7 +7,7 @@ import java.util.Date;
 @Data
 public class Sys_user {
 
-    private Integer id;
+    private String id;
 
     private String name;
 
@@ -15,7 +15,7 @@ public class Sys_user {
 
     private String pwd;
 
-    private Integer status;
+    private String status;
 
     private String roleid;
 

@@ -11,4 +11,17 @@
     <select id="queryByID" resultType="com.alibaba.fastjson.JSONObject" parameterType="com.alibaba.fastjson.JSONObject">
             select * from sys_module where id =#{id}
     </select>
+
+    <insert  id="save"  parameterType="com.art.score.artscore.vo.Sys_module" keyProperty="id">
+            insert into sys_module(modulename,url,parentid,status,remark)
+            values(#{modulename},#{url},#{parentid},#{status},#{remark})
+    </insert >
+
+    <update id="update" parameterType="com.art.score.artscore.vo.Sys_module">
+        update sys_module set modulename=#{modulename},url=#{url},parentid=#{parentid},status=#{status},remark=#{remark} where id=#{id}
+    </update>
+
+    <delete id="deleteByIds" parameterType="string">
+            delete  from  sys_module  where  id in (${ids})
+    </delete>
 </mapper>
