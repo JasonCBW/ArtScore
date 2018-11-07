@@ -37,7 +37,7 @@ public class ModuleServiceImpl implements ModuleService {
 
     @Override
     public ResVo update(Sys_module module) {
-        boolean flag = moduleMapper.save(module);
+        boolean flag = moduleMapper.update(module);
         return new ResVo(flag ? "suc" : "error", flag ? "操作成功" : "操作失败");
     }
 
@@ -45,5 +45,11 @@ public class ModuleServiceImpl implements ModuleService {
     public ResVo dels(String ids) {
         boolean flag = moduleMapper.deleteByIds(ids);
         return new ResVo(flag ? "suc" : "error", flag ? "操作成功" : "操作失败");
+    }
+
+    @Override
+    public List<JSONObject> getModuleTypes() {
+        List<JSONObject> data = moduleMapper.queryModuleTypes();
+        return data;
     }
 }

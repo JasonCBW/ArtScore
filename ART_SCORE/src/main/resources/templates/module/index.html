@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理后台</title>
+    <link href="/layui/css/layui.css" rel="stylesheet"/>
+    <link href="/css/style.css" rel="stylesheet"/>
+    <link rel="icon" href="/image/code.png">
+</head>
+<body class="body">
+<!-- 工具集 -->
+<div class="my-btn-box">
+    <div class="layui-btn-group">
+        <button class="layui-btn layui-btn-normal toolbox" id="add">
+            <i class="layui-icon">&#xe654;</i>新增
+        </button>
+    </div>
+</div>
+
+<!-- 表格 -->
+<div id="dataTable" lay-filter="dataTable"></div>
+
+<script type="text/html" id="statusTpl">
+    {{#  if(d.status == 1){ }}
+    <input type="checkbox" name="status" lay-skin="switch" lay-text="启用|禁用" disabled checked/>
+    {{#  } else { }}
+    <input type="checkbox" name="status" lay-skin="switch" lay-text="启用|禁用" disabled/>
+    {{#  } }}
+
+</script>
+
+<!-- 表格操作按钮集 -->
+<script type="text/html" id="barOption">
+    <a class="layui-btn layui-btn-sm layui-btn-normal" lay-event="edit">编辑</a>
+    <a class="layui-btn layui-btn-sm layui-btn-danger" lay-event="del">删除</a>
+</script>
+</body>
+<script src="/js/jquery-1.10.2.js"></script>
+<script src="/layui/layui.js"></script>
+
+</body>
+</html>
+<script type="text/javascript">
+    layui.use(['table', 'form', 'layer'], function () {
+        // 操作对象
+        var form = layui.form, table = layui.table, layer = layui.layer, $ = layui.jquery;
+        var index = 0;
+
+        // 表格渲染
+        table.render({
+            elem: '#dataTable',
+            id: 'dataCheck',
+            height: 450,
+            even: true,
+            url: '/module/getlist',
+            limits: [10, 15, 20],
+            limit: 10,
+            page: true,
+            loading: true,
+            cols: [[
+                {type: 'checkbox', checkbox: true, fixed: true, float: 'left'},
+                {type: 'numbers', title: '序号'},
+                {field: 'modulename', title: '模块名称'},
+                {field: 'url', title: '页面地址'},
+                // { field: 'parentname', title: '所属类别' },
+                {field: 'status', title: '状态', templet: '#statusTpl'},
+                {fixed: 'right', title: '操作', align: 'center', toolbar: '#barOption'}
+            ]]
+        });
+
+        table.on('tool(dataTable)', function (obj) {
+            var type = obj.event;
+            active[type] ? active[type].call(this, obj) : '';
+        });
+
+        $.ajaxSetup({
+            contentType: "application/json"
+        });
+
+        //按钮自定义事件
+        $(".toolbox").on("click", function () {
+            var type = $(this).attr("id");
+            if (type)
+                active[type] ? active[type].call(this) : '';
+        });
+
+        var active = {
+            //新增
+            add: function () {
+                index = layer.open({
+                    type: 2,
+                    maxmin: false,
+                    title: "新增",
+                    area: ['500px', '470px'],
+                    shadeClose: true,
+                    content: 'module_add'
+                });
+            },
+            //编辑
+            edit: function (obj) {
+                var data = obj.data;
+                index = layer.open({
+                    type: 2,
+                    maxmin: false,
+                    title: "编辑",
+                    area: ['500px', '470px'],
+                    shadeClose: true,
+                    content: '/module_edit?id=' + data.id
+                });
+            },
+            //删除
+            del: function (obj) {
+                var data = obj.data;
+                var ids = "";
+                if (data) {
+                    ids = data.id;
+                }
+                //获取选中的ID传到后台进行删除
+                if (ids == "")
+                    return;
+
+                layer.confirm('确定删除该条数据吗？', {
+                    btn: ['确定', '取消']
+                }, function () {
+                    $.post("/module/delById", {ids: ids}, function (ret) {
+                        if (ret.code == 200) {
+                            setTimeout(function () {
+                                $(".layui-laypage-btn").click();
+                            }, 2000)
+                            layer.msg("删除成功!");
+                        }
+                        else {
+                            layer.msg(ret.msg);
+                        }
+                    }, "json");
+                });
+            }
+        };
+    });
+</script>
