@@ -42,7 +42,7 @@ public class ModuleApiController {
      * 删除模块
      */
     @RequestMapping("delById")
-    public ResVo del(@RequestParam(value = "ids", required = false) String ids) {
+    public ResVo del( String ids) {
         return service.dels(ids);
     }
 

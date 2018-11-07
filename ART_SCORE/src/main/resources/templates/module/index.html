@@ -43,6 +43,11 @@
 </body>
 </html>
 <script type="text/javascript">
+    $.ajaxSetup({
+        contentType : "application/json"
+    });
+
+
     layui.use(['table', 'form', 'layer'], function () {
         // 操作对象
         var form = layui.form, table = layui.table, layer = layui.layer, $ = layui.jquery;
@@ -76,7 +81,7 @@
         });
 
         $.ajaxSetup({
-            contentType: "application/json"
+            contentType: "application/x-www-form-urlencoded"
         });
 
         //按钮自定义事件
@@ -95,7 +100,7 @@
                     title: "新增",
                     area: ['500px', '470px'],
                     shadeClose: true,
-                    content: 'module_add'
+                    content: '/module_add'
                 });
             },
             //编辑
@@ -124,7 +129,7 @@
                 layer.confirm('确定删除该条数据吗？', {
                     btn: ['确定', '取消']
                 }, function () {
-                    $.post("/module/delById", {ids: ids}, function (ret) {
+                    $.post("/module/delById", {"ids": ids}, function (ret) {
                         if (ret.code == 200) {
                             setTimeout(function () {
                                 $(".layui-laypage-btn").click();
