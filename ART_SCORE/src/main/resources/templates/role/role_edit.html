@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理后台</title>
+    <link href="/layui/css/layui.css" rel="stylesheet"/>
+    <link href="/css/style.css" rel="stylesheet"/>
+</head>
+<body class="body">
+
+<!--弹层区域-->
+<form class="layui-form" style="margin:10px 10px 0 -30px;" id="mainForm">
+    <input type="hidden" name="id" />
+    <div class="layui-form-item">
+        <label class="layui-form-label">角色名称</label>
+        <div class="layui-input-block">
+            <input type="text" name="rolename" value="${role.rolename}" lay-verify="required" class="layui-input" />
+        </div>
+    </div>
+    <!--<div class="layui-form-item">-->
+    <!--<label class="layui-form-label">模块权限</label>-->
+    <!--<div class="layui-input-block">-->
+    <!--<select name="modules" xm-select="modules">-->
+    <!--@foreach (var userInfo in Model as Dictionary<string, List<DataRow>>)-->
+    <!--{-->
+    <!--List<DataRow> dataRows = userInfo.Value;-->
+
+    <!--<optgroup label="@userInfo.Key">-->
+
+    <!--@foreach (DataRow dr in dataRows)-->
+    <!--{-->
+    <!--<option value="@dr["id"]">@dr["modulename"]</option>-->
+    <!--}-->
+    <!--</optgroup>-->
+    <!--}-->
+    <!--</select>-->
+    <!--</div>-->
+    <!--</div>-->
+    <div class="layui-form-item">
+        <div class="layui-inline">
+            <label class="layui-form-label">状态</label>
+            <div class="layui-input-block">
+                <input type="radio" name="status" value="1" title="启用" checked>
+                <input type="radio" name="status" value="0" title="禁用">
+            </div>
+        </div>
+    </div>
+    <div class="layui-form-item layui-form-text">
+        <label class="layui-form-label">角色介绍</label>
+        <div class="layui-input-block">
+            <textarea name="remark" style="resize:none" placeholder="请输入角色介绍" class="layui-textarea">${role.remark}</textarea>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+            <button class="layui-btn" id="save" lay-submit lay-filter="moduleform">保存</button>
+            <button id="cancle" class=" layui-btn layui-btn-primary">取消</button>
+        </div>
+    </div>
+</form>
+
+</body>
+<script src="/js/jquery-1.10.2.js"></script>
+<script src="/layui/layui.js"></script>
+
+</body>
+</html>
+<script type="text/javascript">
+    layui.use(['table', 'form', 'layer'], function () {
+        // 操作对象
+        var form = layui.form, layer = layui.layer;
+        $.ajaxSetup({
+            contentType: "application/json"
+        });
+
+        form.on('submit(moduleform)', function (data) {
+            var formdata = JSON.stringify(data.field);
+            $.post("/role/update", formdata, function (ret) {
+                if (ret.code == 200) {
+                    layer.msg("保存成功!");
+                    setTimeout(function () {
+                        closeView();
+                        $(".layui-laypage-btn").click();
+                    }, 2000)
+                }
+                else {
+                    layer.msg(ret.msg);
+                }
+            }, "json");
+            return false;
+        });
+
+        //取消按钮
+        $("#cancle").click(function () {
+            closeView();
+        })
+
+        function closeView() {
+            var index = parent.layer.getFrameIndex(window.name);
+            parent.layer.close(index);
+        }
+    });
+</script>

@@ -4,6 +4,8 @@ import com.alibaba.fastjson.JSONObject;
 import com.art.score.artscore.service.RoleService;
 import com.art.score.artscore.vo.PageVo;
 import com.art.score.artscore.vo.ResVo;
+import com.art.score.artscore.vo.Sys_Role;
+import com.art.score.artscore.vo.Sys_module;
 import org.omg.CORBA.PUBLIC_MEMBER;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -32,9 +34,24 @@ public class RoleApiController {
     }
 
     /**
+     * 新增模块
+     */
+    @RequestMapping("save")
+    public ResVo save(@RequestBody Sys_Role role) {
+        return service.save(role);
+    }
+
+    /**
+     * 更新模块
+     */
+    @RequestMapping("update")
+    public ResVo update(@RequestBody Sys_Role role) {
+        return service.update(role);
+    }
+
+    /**
      * 根据ID获取单个数据
      * */
-
     @RequestMapping("getById")
     public ResVo getByID(@RequestParam Integer id)
     {
@@ -45,8 +62,9 @@ public class RoleApiController {
     /**
      * 角色列表数据
      * */
-    @RequestMapping("delRole")
-    public ResVo delRole(String ids){
+    @RequestMapping("delRoleById")
+    public ResVo delRole(String ids)
+    {
         return   service.deleteRoleByIds(ids);
     }
 

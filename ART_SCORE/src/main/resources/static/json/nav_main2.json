@@ -14,13 +14,13 @@
           "id": 2,
           "text": "角色管理",
           "icon": "&#xe621;",
-          "href": "role.html"
+          "href": "/role/index.html"
         },
         {
           "id": 3,
           "text": "模块管理",
           "icon": "&#xe621;",
-          "href": "module.html"
+          "href": "/module/index.html"
         },
         {
           "id": 4,
