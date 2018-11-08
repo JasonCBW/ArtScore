@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.art.score.artscore.mapper.PermissionMapper" >
+
+    <select id="queryRoleByUserId" resultType="string" parameterType="string">
+            select roleid from sys_user where id=#{userid}
+    </select>
+
+    <select id="queryModuleByRoles" resultType="string" parameterType="string">
+            select GROUP_CONCAT(modules) from sys_role where id in (#{roles})
+    </select>
+
+    <select id="queryPowerByModules" resultType="com.alibaba.fastjson.JSONObject" parameterType="string">
+           select b.id,b.modulename text,b.url href,a.modulename as parentname,cast(a.id as char) as
+           parentid,b.`status`,'' as icon from sys_module a inner join sys_module b on a.id=b.parentid where b.id in
+           (#{modules}) order by b.id desc
+    </select>
+</mapper>
