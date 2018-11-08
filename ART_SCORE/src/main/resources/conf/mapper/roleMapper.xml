@@ -12,6 +12,17 @@
             select * from sys_role where id =#{id}
     </select>
 
+    <insert  id="save"  parameterType="com.art.score.artscore.vo.Sys_role" keyProperty="id">
+            insert into sys_role(rolename,modules,modulesname,status,remark)
+            values(#{rolename},#{modules},#{modulesname},#{status},#{remark})
+    </insert >
+
+    <update id="update" parameterType="com.art.score.artscore.vo.Sys_role">
+        update sys_role set rolename=#{rolename},modules=#{modules},modulesname=#{modulesname},status=#{status},remark=#{remark}
+        where
+        id=#{id}
+    </update>
+
     <delete id="deleteRoleByIds" parameterType="string">
             delete  from  sys_role  where  id in (${ids})
     </delete>

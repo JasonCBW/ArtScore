@@ -4,16 +4,12 @@ import com.alibaba.fastjson.JSONObject;
 import com.art.score.artscore.service.RoleService;
 import com.art.score.artscore.vo.PageVo;
 import com.art.score.artscore.vo.ResVo;
-import com.art.score.artscore.vo.Sys_Role;
-import com.art.score.artscore.vo.Sys_module;
-import org.omg.CORBA.PUBLIC_MEMBER;
+import com.art.score.artscore.vo.Sys_role;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("role")
@@ -37,7 +33,7 @@ public class RoleApiController {
      * 新增模块
      */
     @RequestMapping("save")
-    public ResVo save(@RequestBody Sys_Role role) {
+    public ResVo save(@RequestBody Sys_role role) {
         return service.save(role);
     }
 
@@ -45,7 +41,7 @@ public class RoleApiController {
      * 更新模块
      */
     @RequestMapping("update")
-    public ResVo update(@RequestBody Sys_Role role) {
+    public ResVo update(@RequestBody Sys_role role) {
         return service.update(role);
     }
 

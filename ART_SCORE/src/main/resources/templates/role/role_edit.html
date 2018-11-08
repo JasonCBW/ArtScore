@@ -12,7 +12,7 @@
 
 <!--弹层区域-->
 <form class="layui-form" style="margin:10px 10px 0 -30px;" id="mainForm">
-    <input type="hidden" name="id" />
+    <input type="hidden" value="${role.id}" name="id" />
     <div class="layui-form-item">
         <label class="layui-form-label">角色名称</label>
         <div class="layui-input-block">
@@ -74,6 +74,11 @@
         $.ajaxSetup({
             contentType: "application/json"
         });
+
+        //设置单选框选中
+        $("#mainForm").find('input[type="radio"][name="status"][value="' + ${role.status} +'"]').prop("checked",
+            true);
+        form.render('radio');
 
         form.on('submit(moduleform)', function (data) {
             var formdata = JSON.stringify(data.field);
