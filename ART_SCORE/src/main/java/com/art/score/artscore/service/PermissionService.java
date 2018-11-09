@@ -1,6 +1,6 @@
 package com.art.score.artscore.service;
 
-import com.alibaba.fastjson.JSONObject;
+import com.art.score.artscore.vo.PowerVo;
 
 import java.util.List;
 
@@ -9,5 +9,5 @@ public interface PermissionService {
 
     String getModuleByRoles(String roles);
 
-    List<JSONObject> getPowerByModules(String modules);
+    List<PowerVo> getPowerByModules(String modules);
 }

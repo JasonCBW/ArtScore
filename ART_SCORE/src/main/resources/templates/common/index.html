@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>管理系统</title>
-    <link href="/layui/css/layui.css" rel="stylesheet" />
-    <link href="/css/style.css" rel="stylesheet" />
+    <link href="/layui/css/layui.css" rel="stylesheet"/>
+    <link href="/css/style.css" rel="stylesheet"/>
     <link rel="icon" href="/image/code.png">
 </head>
 <body>
@@ -27,12 +27,14 @@
 
         <!-- 顶部右侧添加选项卡监听 -->
         <ul class="layui-nav my-header-user-nav" lay-filter="side-top-right">
-            @*<li class="layui-nav-item">
-            <a class="name" href="javascript:;"><img src="/image/code.png" alt="logo"> Admin </a>
-            <dl class="layui-nav-child">
-                <dd><a href="/"><i class="layui-icon">&#x1006;</i>退出</a></dd>
-            </dl>
-        </li>*@
+            @*
+            <li class="layui-nav-item">
+                <a class="name" href="javascript:;"><img src="/image/code.png" alt="logo"> Admin </a>
+                <dl class="layui-nav-child">
+                    <dd><a href="/"><i class="layui-icon">&#x1006;</i>退出</a></dd>
+                </dl>
+            </li>
+            *@
         </ul>
     </div>
     <!-- side -->
@@ -87,8 +89,9 @@
             , vipNav = layui.vip_nav;
         //var userinfo = getUserInfo();
         // 主体菜单生成 [请求地址,过滤ID,是否展开,携带参数]
-        vipNav.main('/json/nav_main2.json', 'side-main', true);
-        //vipNav.main('/api/permission/getLeftTree', 'side-main', true, { userid: userinfo.id });
+        // vipNav.main('/json/nav_main2.json', 'side-main', true);
+        // vipNav.main('/permission/getpower', 'side-main', true, { userid: userinfo.id });
+        vipNav.main('/permission/getpower', 'side-main', true);
     });
 </script>
 </body>

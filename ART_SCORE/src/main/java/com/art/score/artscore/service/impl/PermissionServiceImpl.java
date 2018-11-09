@@ -3,6 +3,7 @@ package com.art.score.artscore.service.impl;
 import com.alibaba.fastjson.JSONObject;
 import com.art.score.artscore.mapper.PermissionMapper;
 import com.art.score.artscore.service.PermissionService;
+import com.art.score.artscore.vo.PowerVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -28,9 +29,9 @@ public class PermissionServiceImpl  implements PermissionService {
     }
 
     @Override
-    public List<JSONObject> getPowerByModules(String modules)
+    public List<PowerVo> getPowerByModules(String modules)
     {
-        List<JSONObject> obj =permissionMapper.queryPowerByModules(modules);
+        List<PowerVo> obj =permissionMapper.queryPowerByModules(modules);
         return obj;
     }
 }
