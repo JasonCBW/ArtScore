@@ -26,4 +26,9 @@
     <delete id="deleteRoleByIds" parameterType="string">
             delete  from  sys_role  where  id in (${ids})
     </delete>
+
+    <select id="queryRolesForSelect" resultType="com.art.score.artscore.vo.PowerVo">
+           select b.id,b.modulename text,b.url href,a.modulename as parentname,cast(a.id as char) as
+           parentid,b.`status`,'' as  icon  from sys_module a inner join sys_module b on a.id=b.parentid
+    </select>
 </mapper>

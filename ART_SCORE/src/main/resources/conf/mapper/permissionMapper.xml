@@ -11,9 +11,9 @@
             select GROUP_CONCAT(modules) from sys_role where id in (#{roles})
     </select>
 
-    <select id="queryPowerByModules" resultType="com.alibaba.fastjson.JSONObject" parameterType="string">
+    <select id="queryPowerByModules" resultType="com.art.score.artscore.vo.PowerVo" parameterType="string">
            select b.id,b.modulename text,b.url href,a.modulename as parentname,cast(a.id as char) as
            parentid,b.`status`,'' as icon from sys_module a inner join sys_module b on a.id=b.parentid where b.id in
-           (#{modules}) order by b.id desc
+           (${modules}) order by b.id desc
     </select>
 </mapper>

@@ -26,7 +26,9 @@ public class RoleController {
      * 新增页面
      */
     @RequestMapping(value = "/role_add")
-    public String roleAdd(Map<String, Object> map, Integer id) {
+    public String roleAdd(Map<String, Object> map)
+    {
+        map.put("rs", roleService.queryRolesForSelect());
         return "role/role_add";
     }
 
@@ -35,8 +37,8 @@ public class RoleController {
      */
     @RequestMapping(value = "/role_edit")
     public String roleEdit(Map<String, Object> map, Integer id) {
-        ResVo vo = roleService.getRoleByID(id);
-        map.put("role", vo.getData());
+        map.put("rs", roleService.queryRolesForSelect());
+        map.put("role", roleService.getRoleByID(id).getData());
         return "role/role_edit";
     }
 }

@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.art.score.artscore.mapper.RoleMapper;
 import com.art.score.artscore.service.RoleService;
 import com.art.score.artscore.vo.PageVo;
+import com.art.score.artscore.vo.PowerVo;
 import com.art.score.artscore.vo.ResVo;
 import com.art.score.artscore.vo.Sys_role;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,15 +20,14 @@ public class RoleServiceImpl implements RoleService {
 
     @Override
     public PageVo getRolelist(JSONObject json) {
-        List<JSONObject> data=roleMapper.queryList(json);
+        List<JSONObject> data = roleMapper.queryList(json);
         return new PageVo(0, "", 1000, data);
     }
 
     @Override
-    public ResVo getRoleByID(Integer id)
-    {
-        JSONObject obj=roleMapper.queryByID(id);
-        return new ResVo("suc", "操作成功",obj);
+    public ResVo getRoleByID(Integer id) {
+        JSONObject obj = roleMapper.queryByID(id);
+        return new ResVo("suc", "操作成功", obj);
     }
 
     @Override
@@ -47,5 +47,13 @@ public class RoleServiceImpl implements RoleService {
     public ResVo deleteRoleByIds(String ids) {
         boolean flag = roleMapper.deleteRoleByIds(ids);
         return new ResVo(flag ? "suc" : "error", flag ? "操作成功" : "操作失败");
+    }
+
+    @Override
+    public  List<PowerVo> queryRolesForSelect() {
+        List<PowerVo> obj = roleMapper.queryRolesForSelect();
+
+
+        return obj;
     }
 }
