@@ -9,7 +9,7 @@ public class Sys_user {
 
     private String id;
 
-    private String name;
+    private String username;
 
     private String logincode;
 

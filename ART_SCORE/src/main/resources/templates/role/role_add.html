@@ -74,13 +74,12 @@
 
         form.on('submit(moduleform)', function (data) {
             var formdata = JSON.stringify(data.field);
-            formdata.modulesname = formSelects.value("modules", "nameStr");
             $.post("/role/save", formdata, function (ret) {
                 if (ret.code == 200) {
                     layer.msg("保存成功!");
                     setTimeout(function () {
                         closeView();
-                        $(".layui-laypage-btn").click();
+                        parent.window.$(".layui-laypage-btn").click();
                     }, 2000)
                 }
                 else {

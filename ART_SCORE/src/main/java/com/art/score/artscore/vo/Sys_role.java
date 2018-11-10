@@ -11,8 +11,6 @@ public class Sys_role {
 
     private String modules;
 
-    private String modulesname;
-
     private String status;
 
     private String remark;

@@ -19,10 +19,10 @@ public class UserController {
     RoleService roleService;
 
     /**
-     * 模块页面
+     * 用户页面
      */
     @RequestMapping(value = "/user/index")
-    public String role(Map<String, Object> map) {
+    public String user(Map<String, Object> map) {
         return "user/index";
     }
 
@@ -30,9 +30,9 @@ public class UserController {
      * 新增页面
      */
     @RequestMapping(value = "/user_add")
-    public String roleAdd(Map<String, Object> map)
+    public String userAdd(Map<String, Object> map)
     {
-        map.put("roles",roleService.getRolelist());
+        map.put("roles",roleService.getRolelist().getData());
         return "user/user_add";
     }
 
@@ -40,9 +40,9 @@ public class UserController {
      * 编辑页面
      */
     @RequestMapping(value = "/user_edit")
-    public String roleEdit(Map<String, Object> map, Integer id) {
+    public String userEdit(Map<String, Object> map, Integer id) {
         ResVo vo = userService.getUserByID(id);
-        map.put("roles",roleService.getRolelist());
+        map.put("roles",roleService.getRolelist().getData());
         map.put("user", vo.getData());
         return "user/user_edit";
     }

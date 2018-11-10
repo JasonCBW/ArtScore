@@ -23,13 +23,14 @@
     <div class="layui-form-item">
         <label class="layui-form-label">页面地址</label>
         <div class="layui-input-block">
-            <input type="text" name="url" lay-verify="required" class="layui-input"/>
+            <input type="text" name="url" class="layui-input"/>
         </div>
     </div>
     <div class="layui-form-item">
         <label class="layui-form-label">所属分类</label>
         <div class="layui-input-block">
             <select id="moduletype" lay-filter="moduletype" name="parentid">
+                <option value="0">一级分类(默认)</option>
                 <#list types as item>
                     <option value="${item.id}">${item.modulename}</option>
                 </#list>
@@ -80,7 +81,7 @@
                     layer.msg("保存成功!");
                     setTimeout(function () {
                         closeView();
-                        $(".layui-laypage-btn").click();
+                        parent.window.$(".layui-laypage-btn").click();
                     }, 2000)
                 }
                 else {

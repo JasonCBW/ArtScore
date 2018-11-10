@@ -1,6 +1,5 @@
 package com.art.score.artscore.controller;
 
-import com.alibaba.fastjson.JSONObject;
 import com.art.score.artscore.service.RoleService;
 import com.art.score.artscore.vo.PageVo;
 import com.art.score.artscore.vo.PowerVo;
@@ -34,15 +33,16 @@ public class RoleApiController {
     }
 
     /**
-     * 新增模块
+     * 新增
      */
     @RequestMapping("save")
-    public ResVo save(@RequestBody Sys_role role) {
+    public ResVo save(@RequestBody Sys_role role)
+    {
         return service.save(role);
     }
 
     /**
-     * 更新模块
+     * 更新
      */
     @RequestMapping("update")
     public ResVo update(@RequestBody Sys_role role) {

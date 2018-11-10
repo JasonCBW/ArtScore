@@ -12,39 +12,43 @@
 
 <!--弹层区域-->
 <form class="layui-form" style="margin:10px 10px 0 -30px;" id="mainForm">
-    <input type="hidden" value="${role.id}" name="id" />
+    <input type="hidden" name="id" value="${user.id}"/>
     <div class="layui-form-item">
-        <label class="layui-form-label">角色名称</label>
+        <label class="layui-form-label">姓名</label>
         <div class="layui-input-block">
-            <input type="text" name="rolename" value="${role.rolename}" lay-verify="required" class="layui-input" />
+            <input type="text" name="username" value="${user.username}" lay-verify="required" class="layui-input"/>
         </div>
     </div>
     <div class="layui-form-item">
-        <div class="layui-inline">
-            <label class="layui-form-label">所属角色</label>
-            <#list roles as item>
-            <input type="checkbox" name="roleid" value="${item.id}" title="${item.rolename}" lay-skin="primary" />
-        </#list>
+        <label class="layui-form-label">登录码</label>
+        <div class="layui-input-block">
+            <input type="text" name="logincode" value="${user.logincode}" lay-verify="required" class="layui-input"/>
+        </div>
     </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">密码</label>
+        <div class="layui-input-block">
+            <input type="password" name="pwd" value="${user.pwd}" lay-verify="required" class="layui-input"/>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">所属角色</label>
+        <#list roles as r>
+        <input type="checkbox" name="roleid" value="${r.id}" title="${r.rolename}" lay-skin="primary"/>
+    </#list>
     </div>
     <div class="layui-form-item">
         <div class="layui-inline">
             <label class="layui-form-label">状态</label>
-            <div class="layui-input-block">
+            <div class="layui-input-inline">
                 <input type="radio" name="status" value="1" title="启用" checked>
                 <input type="radio" name="status" value="0" title="禁用">
             </div>
         </div>
     </div>
-    <div class="layui-form-item layui-form-text">
-        <label class="layui-form-label">角色介绍</label>
-        <div class="layui-input-block">
-            <textarea name="remark" style="resize:none" placeholder="请输入角色介绍" class="layui-textarea">${role.remark}</textarea>
-        </div>
-    </div>
     <div class="layui-form-item">
         <div class="layui-input-block">
-            <button class="layui-btn" id="save" lay-submit lay-filter="moduleform">保存</button>
+            <button class="layui-btn" id="save" lay-submit lay-filter="userform">保存</button>
             <button id="cancle" class=" layui-btn layui-btn-primary">取消</button>
         </div>
     </div>
@@ -60,36 +64,63 @@
     layui.use(['table', 'form', 'layer'], function () {
         // 操作对象
         var form = layui.form, layer = layui.layer;
+
         $.ajaxSetup({
             contentType: "application/json"
         });
 
-        //设置单选框选中
-        $("#mainForm").find('input[type="radio"][name="status"][value="' + ${role.status} +'"]').prop("checked",
-            true);
-        form.render('radio');
-
-        form.on('submit(moduleform)', function (data) {
-            var formdata = JSON.stringify(data.field);
-            $.post("/role/update", formdata, function (ret) {
-                if (ret.code == 200) {
+        form.on('submit(userform)', function (data) {
+            var formdata = data.field;
+            var roles = getcheckroles();
+            formdata.roleid = roles;
+            formdata = JSON.stringify(formdata);
+            $.post("/user/update", formdata, function (ret) {
+                if (ret.code==200) {
                     layer.msg("保存成功!");
                     setTimeout(function () {
                         closeView();
-                        $(".layui-laypage-btn").click();
+                        parent.window.$(".layui-laypage-btn").click();
                     }, 2000)
                 }
                 else {
                     layer.msg(ret.msg);
                 }
             }, "json");
-            return false;
+            return false; //阻止表单跳转。如果需要表单跳转，去掉这段即可。
         });
+
+        //设置单选框选中
+        $("#mainForm").find('input[type="radio"][name="status"][value="' + ${user.status} +'"]').prop("checked",
+            true);
+
+        //设置复选框选中
+        var vals = '${user.roleid}'.split(',');
+        for (var i = 0; i < vals.length; i++) {
+            $("#mainForm").find('input[type="checkbox"][name="roleid"][value="' + vals[i] + '"]').prop("checked", true);
+        }
+        form.render('checkbox');
+
+        form.render('radio');
 
         //取消按钮
         $("#cancle").click(function () {
             closeView();
         })
+
+        //获取选中角色
+        function getcheckroles() {
+            var roles = "";
+            var checkdata = $.find('input[type="checkbox"][name="roleid"]');
+            for (var i = 0; i < checkdata.length; i++) {
+                if (checkdata[i].checked) {
+                    roles += checkdata[i].value + ",";
+                }
+            }
+            if (roles != "")
+                roles = roles.substr(0, roles.length - 1);
+
+            return roles;
+        }
 
         function closeView() {
             var index = parent.layer.getFrameIndex(window.name);

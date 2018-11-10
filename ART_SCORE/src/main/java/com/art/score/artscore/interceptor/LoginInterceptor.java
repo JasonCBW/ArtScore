@@ -24,7 +24,7 @@ public class LoginInterceptor implements HandlerInterceptor {
     private String sessionName;
 
     //公开访问的的URL
-    List<String> authList = new ArrayList<String>(Arrays.asList("/login","/loginValidata"));
+    List<String> authList = new ArrayList<String>(Arrays.asList("/login", "/loginValidata"));
 
     @Override
     public boolean preHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o) throws Exception {
@@ -32,21 +32,18 @@ public class LoginInterceptor implements HandlerInterceptor {
         //获取请求的RUi:去除http:localhost:8080这部分剩下的
         String url = httpServletRequest.getRequestURI();
         //UTL:除了login是可以公开访问的，其他的URL都进行拦截控制
-        for (String str:authList){
+        for (String str : authList) {
             if (url.indexOf(str) >= 0)
                 return true;
         }
-
         Sys_user user = (Sys_user) session.getAttribute(sessionName);
-        if (user != null){
+        if (user != null) {
             return true;
-        }else {
-            httpServletResponse.sendRedirect(httpServletRequest.getContextPath()+"/login");
+        } else {
+            httpServletResponse.sendRedirect(httpServletRequest.getContextPath() + "/login");
             return false;
         }
-
-
-
+//        return true;
     }
 
     @Override
