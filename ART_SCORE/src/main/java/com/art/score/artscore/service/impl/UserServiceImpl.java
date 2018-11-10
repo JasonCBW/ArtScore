@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.art.score.artscore.mapper.RoleMapper;
 import com.art.score.artscore.mapper.UserMapper;
 import com.art.score.artscore.service.UserService;
+import com.art.score.artscore.vo.PageVo;
 import com.art.score.artscore.vo.ResVo;
 import com.art.score.artscore.vo.Sys_role;
 import com.art.score.artscore.vo.Sys_user;
@@ -19,26 +20,19 @@ public class UserServiceImpl implements UserService {
     UserMapper userMapper;
 
     @Override
-    public JSONObject getUserlist() {
-        JSONObject obj=new JSONObject();
-        List<JSONObject> data=userMapper.queryList();
-        obj.put("code",0);
-        obj.put("msg","");
-        obj.put("count",data.size());
-        obj.put("data",data);
-        return obj;
+    public PageVo getUserlist() {
+        List<JSONObject> data = userMapper.queryList();
+        return new PageVo(0, "", 1000, data);
     }
 
     @Override
-    public ResVo getUserByID(Integer id)
-    {
-        JSONObject obj=userMapper.queryByID(id);
-        return new ResVo("suc", "操作成功",obj);
+    public ResVo getUserByID(Integer id) {
+        JSONObject obj = userMapper.queryByID(id);
+        return new ResVo("suc", "操作成功", obj);
     }
 
     @Override
-    public ResVo save(Sys_user user)
-    {
+    public ResVo save(Sys_user user) {
         boolean flag = userMapper.save(user);
         return new ResVo(flag ? "suc" : "error", flag ? "操作成功" : "操作失败");
     }

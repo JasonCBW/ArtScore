@@ -24,12 +24,15 @@ public class LoginServiceImpl implements LoginService {
     @Override
     @Transactional(rollbackFor = Exception.class)
     public ResVo loginValidata(HttpServletRequest request, String account, String pwd) {
-        Sys_user sys_user =  loginMapper.loginValidata(account, pwd);
-
-        if(sys_user!=null){
+        Sys_user sys_user = loginMapper.loginValidata(account, pwd);
+        ResVo vo = null;
+        if (sys_user != null) {
             HttpSession session = request.getSession();
             session.setAttribute(sessionName, sys_user);
+            vo = new ResVo("suc", "操作成功", sys_user);
+        } else {
+            vo = new ResVo("error", "账号或密码错误", null);
         }
-        return new ResVo("suc", "操作成功",sys_user);
+        return vo;
     }
 }

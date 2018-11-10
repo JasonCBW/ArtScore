@@ -2,6 +2,7 @@ package com.art.score.artscore.controller;
 
 import com.alibaba.fastjson.JSONObject;
 import com.art.score.artscore.service.UserService;
+import com.art.score.artscore.vo.PageVo;
 import com.art.score.artscore.vo.ResVo;
 import com.art.score.artscore.vo.Sys_user;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +23,7 @@ public class UserApiController {
      * 用户列表数据
      * */
     @RequestMapping("getlist")
-    public JSONObject queryList(){
+    public PageVo queryList(){
         return  service.getUserlist();
     }
 

@@ -20,7 +20,7 @@ import static java.util.stream.Collectors.groupingBy;
 
 @RestController
 @RequestMapping("permission")
-public class PermissionController {
+public class PermissionApiController {
 
     @Value("${login_info}")
     private String sessionName;

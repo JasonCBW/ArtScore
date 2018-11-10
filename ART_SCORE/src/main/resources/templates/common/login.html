@@ -38,7 +38,9 @@
             var formdata = data.field;
             $.post("/login/loginValidata", formdata, function (ret) {
                 console.log(ret);
-                if (ret.code==200 && data!=null) {
+                debugger;
+                if (ret.code==200 && ret.data!=null) {
+                    debugger;
                     layer.msg("登录成功!");
                     setTimeout(function () {
                         //保存用户信息到cookie
@@ -47,7 +49,7 @@
                     }, 2000);
                 }
                 else {
-                    layer.msg("登录失败!");
+                    layer.msg(ret.msg);
                 }
             }, "json");
             return false;
