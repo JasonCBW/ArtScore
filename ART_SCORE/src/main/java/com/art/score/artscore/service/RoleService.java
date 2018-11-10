@@ -9,7 +9,7 @@ import com.art.score.artscore.vo.Sys_role;
 import java.util.List;
 
 public interface RoleService {
-    PageVo getRolelist(JSONObject josn);
+    PageVo getRolelist();
 
     ResVo getRoleByID(Integer id);
 

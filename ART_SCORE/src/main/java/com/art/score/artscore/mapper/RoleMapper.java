@@ -9,7 +9,7 @@ import java.util.List;
 
 public interface RoleMapper {
 
-    List<JSONObject> queryList(JSONObject jsonObject);
+    List<JSONObject> queryList();
 
     JSONObject queryByID(Integer id);
 

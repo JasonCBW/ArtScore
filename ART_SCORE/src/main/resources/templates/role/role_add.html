@@ -7,37 +7,33 @@
     <title>管理后台</title>
     <link href="/layui/css/layui.css" rel="stylesheet"/>
     <link href="/css/style.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="/formSelects/dist/formSelects-v4.css"/>
 </head>
 <body class="body">
 
 <!--弹层区域-->
 <form class="layui-form" style="margin:10px 10px 0 -30px;" id="mainForm">
-    <input type="hidden" name="id" />
+    <input type="hidden" name="id"/>
     <div class="layui-form-item">
         <label class="layui-form-label">角色名称</label>
         <div class="layui-input-block">
-            <input type="text" name="rolename" lay-verify="required" class="layui-input" />
+            <input type="text" name="rolename" lay-verify="required" class="layui-input"/>
         </div>
     </div>
-    <!--<div class="layui-form-item">-->
-    <!--<label class="layui-form-label">模块权限</label>-->
-    <!--<div class="layui-input-block">-->
-    <!--<select name="modules" xm-select="modules">-->
-    <!--@foreach (var userInfo in Model as Dictionary<string, List<DataRow>>)-->
-    <!--{-->
-    <!--List<DataRow> dataRows = userInfo.Value;-->
-
-    <!--<optgroup label="@userInfo.Key">-->
-
-    <!--@foreach (DataRow dr in dataRows)-->
-    <!--{-->
-    <!--<option value="@dr["id"]">@dr["modulename"]</option>-->
-    <!--}-->
-    <!--</optgroup>-->
-    <!--}-->
-    <!--</select>-->
-    <!--</div>-->
-    <!--</div>-->
+    <div class="layui-form-item">
+        <label class="layui-form-label">模块权限</label>
+        <div class="layui-input-block">
+            <select name="modules" xm-select="modules">
+                <#list rs?keys as key>
+                <optgroup label="${key}">
+                    <#list rs[key] as r>
+                    <option value="${r.id}">${r.text}</option>
+                </#list>
+                </optgroup>
+            </#list>
+            </select>
+        </div>
+    </div>
     <div class="layui-form-item">
         <div class="layui-inline">
             <label class="layui-form-label">状态</label>
@@ -64,19 +60,21 @@
 </body>
 <script src="/js/jquery-1.10.2.js"></script>
 <script src="/layui/layui.js"></script>
+<script src="/js/index.js"></script>
 
 </body>
 </html>
 <script type="text/javascript">
-    layui.use(['table', 'form', 'layer'], function () {
+    layui.use(['table', 'form', 'layer', 'formSelects'], function () {
         // 操作对象
-        var form = layui.form, layer = layui.layer;
+        var form = layui.form, layer = layui.layer, formSelects = layui.formSelects;
         $.ajaxSetup({
             contentType: "application/json"
         });
 
         form.on('submit(moduleform)', function (data) {
             var formdata = JSON.stringify(data.field);
+            formdata.modulesname = formSelects.value("modules", "nameStr");
             $.post("/role/save", formdata, function (ret) {
                 if (ret.code == 200) {
                     layer.msg("保存成功!");
@@ -91,6 +89,8 @@
             }, "json");
             return false;
         });
+
+        formSelects.render();
 
         //取消按钮
         $("#cancle").click(function () {

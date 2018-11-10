@@ -18,14 +18,13 @@ public class UserApiController {
     UserService service;
 
     /**
-     * 角色列表数据
+     * 用户列表数据
      * */
     @RequestMapping("getlist")
     public JSONObject queryList(String userid){
         JSONObject params = new JSONObject();
         params.put("userid",userid);
-        JSONObject aaa = service.getUserlist(params);
-        return  aaa;
+        return  service.getUserlist(params);
     }
 
     /**

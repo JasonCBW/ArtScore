@@ -19,8 +19,8 @@ public class RoleServiceImpl implements RoleService {
     RoleMapper roleMapper;
 
     @Override
-    public PageVo getRolelist(JSONObject json) {
-        List<JSONObject> data = roleMapper.queryList(json);
+    public PageVo getRolelist() {
+        List<JSONObject> data = roleMapper.queryList();
         return new PageVo(0, "", 1000, data);
     }
 
@@ -52,8 +52,6 @@ public class RoleServiceImpl implements RoleService {
     @Override
     public  List<PowerVo> queryRolesForSelect() {
         List<PowerVo> obj = roleMapper.queryRolesForSelect();
-
-
         return obj;
     }
 }

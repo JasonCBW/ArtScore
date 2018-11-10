@@ -19,25 +19,14 @@
             <input type="text" name="rolename" value="${role.rolename}" lay-verify="required" class="layui-input" />
         </div>
     </div>
-    <!--<div class="layui-form-item">-->
-    <!--<label class="layui-form-label">模块权限</label>-->
-    <!--<div class="layui-input-block">-->
-    <!--<select name="modules" xm-select="modules">-->
-    <!--@foreach (var userInfo in Model as Dictionary<string, List<DataRow>>)-->
-    <!--{-->
-    <!--List<DataRow> dataRows = userInfo.Value;-->
-
-    <!--<optgroup label="@userInfo.Key">-->
-
-    <!--@foreach (DataRow dr in dataRows)-->
-    <!--{-->
-    <!--<option value="@dr["id"]">@dr["modulename"]</option>-->
-    <!--}-->
-    <!--</optgroup>-->
-    <!--}-->
-    <!--</select>-->
-    <!--</div>-->
-    <!--</div>-->
+    <div class="layui-form-item">
+        <div class="layui-inline">
+            <label class="layui-form-label">所属角色</label>
+            <#list roles as item>
+            <input type="checkbox" name="roleid" value="${item.id}" title="${item.rolename}" lay-skin="primary" />
+        </#list>
+    </div>
+    </div>
     <div class="layui-form-item">
         <div class="layui-inline">
             <label class="layui-form-label">状态</label>

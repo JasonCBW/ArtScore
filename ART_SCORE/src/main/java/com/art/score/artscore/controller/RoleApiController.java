@@ -28,10 +28,8 @@ public class RoleApiController {
      * 角色列表数据
      */
     @RequestMapping("getlist")
-    public PageVo queryList(String userid) {
-        JSONObject params = new JSONObject();
-        params.put("userid", userid);
-        PageVo vo = service.getRolelist(params);
+    public PageVo queryList() {
+        PageVo vo = service.getRolelist();
         return vo;
     }
 
