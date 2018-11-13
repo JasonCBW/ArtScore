@@ -34,3 +34,7 @@ logging:
 
 mybatis:
   mapper-locations: classpath:conf/mapper/*.xml
+
+wechat:
+  mpAppId: wx4449971beffdadf8
+  mpAppSecret: 182bc193bed76e774b2c191f446888e0
